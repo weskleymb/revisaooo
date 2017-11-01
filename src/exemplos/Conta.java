@@ -75,7 +75,19 @@ public abstract class Conta {
 
     @Override
     public String toString() {
-        return "Conta{" + "agencia=" + agencia + ", conta=" + conta + ", titular=" + titular + ", saldo=" + saldo + '}';
+        return "Conta{" 
+                + "agencia=" + agencia 
+                + ", conta=" + conta 
+                + ", titular=" + titular 
+                + ", saldo=" + saldo 
+                + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Conta c1 = this;
+        Conta c2 = (Conta) obj;
+        return (c1.conta == c2.conta && c1.agencia == c2.agencia);
     }
 
 }

@@ -61,6 +61,12 @@ public class Pessoa {
     public void setPeso(Double peso) {
         this.peso = peso;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Pessoa pessoa = (Pessoa) obj;
+        return (this.nome.equals(pessoa.nome) && this.idade.equals(pessoa.idade));
+    }
     
     @Override
     public String toString() {
